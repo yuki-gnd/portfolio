@@ -18,6 +18,7 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     public const HOME = '/home';
+    // ホーム画面のURLを変更するには、'/home'を変更したいドメイン以下のURLに書き替える
 
     /**
      * Define your route model bindings, pattern filters, and other route configuration.
