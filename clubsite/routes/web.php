@@ -18,4 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/memberslist', [MemberController::class, 'index'])->name('memberslist');
+Route::get('/about',function(){
+    return view('about');
+});
+
+Route::get('member/memberslist', [MemberController::class, 'index'])->name('memberslist');
+
+Route::get('member/addmember', [MemberController::class, 'add'])->name('addmember');
