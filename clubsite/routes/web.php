@@ -24,4 +24,8 @@ Route::get('/about',function(){
 
 Route::get('member/memberslist', [MemberController::class, 'index'])->name('memberslist');
 
-Route::get('member/addmember', [MemberController::class, 'add'])->name('addmember');
+Route::get('member/addmember', [MemberController::class, 'add'])->name('member/addmember');
+
+Route::post('member/addmember', [MemberController::class, 'create'])->name('member/createmember');
+
+Route::get('membership/board', [BoardController::class, 'index'])->name('membership/board');

@@ -2,8 +2,8 @@
 
 @section('body')
     <div>
-        入力内容確認
-        <table>
+        <div>入力内容確認</div>
+        <table class="tabel table-bordered">
             <tr>
                 <th>氏名</th>
                 <th>住所</th>
@@ -15,7 +15,6 @@
                 <td>{{$param->address}}</td>
                 <td>{{$param->tel}}</td>
                 <td>{{$param->email}}</td>
-
             </tr>
         </table>
     </div>

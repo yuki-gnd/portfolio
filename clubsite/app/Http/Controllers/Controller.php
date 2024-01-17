@@ -10,7 +10,7 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
 
-    public function index() {
-        return view('about');
-    }
+    // public function index() {
+    //     return view('about');
+    // }
 }

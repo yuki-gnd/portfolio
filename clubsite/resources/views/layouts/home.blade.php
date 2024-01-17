@@ -27,6 +27,15 @@
         nav ul li {
             margin-left: 10px;
         }
+
+        table {
+            margin: 20px 0px ;
+        }
+
+        .site_title {
+            font-size: 25px;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -38,9 +47,10 @@
                 <li><a href="/home">Home</a></li>
                 <li><a href="/about">About this club</a></li>
                 <li><a href="/member/addmember">Join our club</a></li>
-                <li><a href="#">Membership board</a></li>
+                <li><a href="/membership/board">Membership board</a></li>
                 <li><a href="#">Stack your books up</a></li>
                 <li><a href="#">Contact us</a></li>
+                <li><a href="#">Login</a></li>
             </ul>
         </nav>
     </header>

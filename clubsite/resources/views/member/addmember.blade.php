@@ -22,7 +22,7 @@
             </div>
             <div class="input-group mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-default">メールアドレス</span>
-                <input type="text" name="mail" class="form-control" aria-label="Sizing example input"
+                <input type="text" name="email" class="form-control" aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-default">
             </div>
             <input type="submit" value="登録" class="guest_btn btn btn-secondary">
