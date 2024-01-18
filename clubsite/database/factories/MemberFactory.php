@@ -18,8 +18,7 @@ class MemberFactory extends Factory
     {
         return [
             'name' => fake()-> name(),
-            'address' => fake() -> address(),
-            'tel' => fake() ->phoneNumber(),
+            'password' => fake() ->password(),
             'email' => fake() -> email()
         ];
     }

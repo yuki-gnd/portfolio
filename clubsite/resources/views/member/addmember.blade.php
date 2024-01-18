@@ -6,18 +6,13 @@
         <form action="/member/addmember" method="POST">
             @csrf
             <div class="input-group mg-3">
-                <span class="input-group-text" id="inputGroup-sizing-default">氏名</span>
+                <span class="input-group-text" id="inputGroup-sizing-default">お名前</span>
                 <input type="text" name="name" class="form-control" aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-default">
             </div>
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-default">ご住所</span>
-                <input type="text" name="address" class="form-control" aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-default">
-            </div>
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-default">電話番号</span>
-                <input type="text" name="tel" class="form-control" aria-label="Sizing example input"
+            <div class="input-group mg-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">パスワード</span>
+                <input type="password" name="password" class="form-control" aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-default">
             </div>
             <div class="input-group mb-3">

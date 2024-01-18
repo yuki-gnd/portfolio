@@ -28,4 +28,6 @@ Route::get('member/addmember', [MemberController::class, 'add'])->name('member/a
 
 Route::post('member/addmember', [MemberController::class, 'create'])->name('member/createmember');
 
-Route::get('membership/board', [BoardController::class, 'index'])->name('membership/board');
+Route::get('member/editmember', [MemberController::class, 'edit'])->name('member/editmember');
+
+Route::patch('member/updatemember', [MemberController::class, 'update'])->name('member/updatemember');

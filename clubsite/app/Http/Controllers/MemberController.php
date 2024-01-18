@@ -19,10 +19,18 @@ class MemberController extends Controller
     public function create(Request $request) {
         $param = Member::create([
             'name' => $request->name,
-            'address' => $request->address,
-            'tel' => $request->tel,
+            'password' => $request->password,
             'email' => $request->email,
         ]);
         return view('member/createmember', ['param' => $param]);
+    }
+
+    public function edit(Member $member) {
+        
+        return view('member.editmember',compact('member'));
+    }
+
+    public function update(Request $request, Member $member) {
+        
     }
 }
