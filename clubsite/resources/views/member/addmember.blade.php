@@ -2,7 +2,7 @@
 
 @section('body')
     <div class="member_form">
-        入会申し込みフォーム
+        会員登録フォーム
         <form action="/member/addmember" method="POST">
             @csrf
             <div class="input-group mg-3">

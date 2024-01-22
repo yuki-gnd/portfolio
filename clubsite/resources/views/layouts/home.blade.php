@@ -36,6 +36,11 @@
             font-size: 25px;
             font-weight: bold;
         }
+        
+        footer {
+            text-align: right;
+            font-size: 12px;
+        }
     </style>
 </head>
 
@@ -57,6 +62,10 @@
     <main>
             @yield('body')
     </main>
+    <footer>
+        <hr>
+        2024 BookLoverClub All Rights Reserved.
+    </footer>
 </body>
 
 </html>
