@@ -23,12 +23,15 @@
                     <td>{{ $member->password }}</td>
                     <td>{{ $member->email }}</td>
                     <td>
-                        <button>
+                        <form action="">
+                            @csrf
+                        <button type="submit">
                             <a href="{{route('member.editmember', ['id' => $member->member_id])}}">更新</a>
                         </button>
                         <button>
                             <a href="{{route('member.confirmdelete', ['id' => $member->member_id])}}">削除</a>
                         </button>
+                    </form>
                     </td>
                 </tr>
             @endforeach

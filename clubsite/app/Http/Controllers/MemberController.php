@@ -31,12 +31,26 @@ class MemberController extends Controller
     public function edit($id)
     {
         $member = Member::findOrFail($id);
-        return view('member/editmember', compact('member'));
+        return view('member.editmember', compact('member'));
     }
 
-    // public function update(Request $request) {
-    //     $member = Member::update()
-    // }
+    public function update(Request $request, $id) 
+    {
+        $request -> validate([
+            'name' => 'required|string|max:255',
+            'password' => 'required|min:8',
+            'email' => 'required|email|unique:members,email,'.$id,
+        ]);
+
+
+        $member = Member::findOrFail($id);
+        $member -> update([
+            'name' => $request->input('name'),
+            'password' => $request->input('password'),
+            'email' => $request->input('email'),
+        ]);
+        return redirect()->route('member.updatemember', ['member' => $member->member_id])->with('success','会員情報を更新しました。');
+    }
 
     public function show($id)
     {
@@ -46,8 +60,8 @@ class MemberController extends Controller
 
     public function destroy($id)
     {
-        $member = Member::findPrFail($id);
+        $member = Member::findOrFail($id);
         $member->delete();
-        return redirect()->route('member.deletemember')->with('success', '会員情報を削除しました。');
+        return view('member.deletemember')->with('success', '会員情報を削除しました。');
     }
 }

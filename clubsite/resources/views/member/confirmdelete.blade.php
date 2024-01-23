@@ -21,8 +21,13 @@
                 <td>{{ $member->email }}</td>
             </tr>
         </table>
-        <button>
-            <a href="{{route('member.deletemember', ['id' => $member->member_id])}}">削除</a>
-        </button>
+        <form action="{{ route('member.deletemember', ['id' => $member->member_id]) }}" method="POST">
+            @csrf
+            @method('delete')
+            <button type="submit">
+                削除
+            </button>
+        </form>
+
     </div>
 @endsection

@@ -5,8 +5,9 @@
         登録情報の更新
         <p>更新する情報をフォームに入力してください。</p>
         <div class="edit_member_form">
-            <form action="{{route('member/editmember', ['id' => $member->member_id])}}" method="POST">
+            <form action="{{route('member.editmember', ['id' => $member->member_id])}}" method="POST">
                 @csrf
+                @method('patch')
                 <table class="table table-striped">
                     <tr>
                         <th>会員番号</th>
@@ -57,7 +58,7 @@
                         </td>
                     </tr>
                 </table>
-                <input type="submit" value="更新" class="guest_btn btn btn-secondary">
+                <button type="submit">更新</button>
             </form>
         </div>
     </div>
