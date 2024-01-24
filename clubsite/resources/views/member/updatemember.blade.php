@@ -2,7 +2,7 @@
 
 @section('body')
     <div>以下の内容で登録内容を更新しました。</div>
-    <table>
+    <table class="table table-striped">
             <tr>
                 <th>会員番号</th>
                 <td>{{$member->member_id}}</td>

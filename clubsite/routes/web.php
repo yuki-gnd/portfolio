@@ -31,7 +31,7 @@ Route::post('member/addmember', [MemberController::class, 'create'])->name('memb
 
 // 会員情報 更新
 Route::get('member/editmember/{id}', [MemberController::class, 'edit'])->name('member.editmember');
-Route::patch('member/updatemember/{id}', [MemberController::class, 'update'])->name('member.updatemember');
+Route::patch('member/editmember/{id}', [MemberController::class, 'update'])->name('member.updatemember');
 
 // 会員情報 削除
 Route::get('member/confirmdelete/{id}',[MemberController::class, 'show'])->name('member.confirmdelete');

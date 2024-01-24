@@ -38,15 +38,16 @@ class MemberController extends Controller
     {
         $request -> validate([
             'name' => 'required|string|max:255',
-            'password' => 'required|min:8',
+            // 'password' => 'required|min:8',
+            'password' => bcrypt($request->input('password')),
+            'password_comfirmation' => 'required|same:password',
             'email' => 'required|email|unique:members,email,'.$id,
         ]);
-
 
         $member = Member::findOrFail($id);
         $member -> update([
             'name' => $request->input('name'),
-            'password' => $request->input('password'),
+            'password' => bcrypt($request->input('password')),
             'email' => $request->input('email'),
         ]);
         return redirect()->route('member.updatemember', ['member' => $member->member_id])->with('success','会員情報を更新しました。');
